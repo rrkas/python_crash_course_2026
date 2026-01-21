@@ -1,0 +1,12 @@
+python environments & dependencies
+modules and packages
+python basics
+    data types
+functions
+classes
+    basic
+    inheritance
+decorators
+rest api
+file management & io
+threading & multiprocessing

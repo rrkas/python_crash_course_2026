@@ -1,0 +1,232 @@
+========================================= playground
+
+https://www.programiz.com/python-programming/online-compiler/
+
+========================================= environment
+
+python -m venv .venv
+virtualenv .venv2
+
+uv init ==> boilerplate
+uv sync ==> env
+
+========================================= modules and packages
+
+folder = module
+file = package (inside a module)
+object/ fn = inside a package
+
+========================================= __name__
+
+__name__
+    when run directly: __main__
+    else: name of py file name
+
+
+========================================= IMP
+
+indentation: very IMP
+
+========================================= brackets
+
+{} : dict/ map , set
+() : tuples, expression, args
+[] : list, indexing
+
+========================================= data types
+
+dict: (mutable)
+    key - value
+        key     : immutable
+        value   : anything
+    
+    index: key
+    heterogenous
+
+    syntax examples:
+        d = {}  
+        d = dict()                  # {}
+        d = {23: 100}
+        d = dict(k=v)               # {"k": v}
+            d = dict(hello=100)     # {"hello":100}    # key must be string
+            d = dict(100="hello")   # ERROR
+            d = {100: "hello"}      # NO ERROR
+
+    note:
+        the collection of keys of a dict is a set
+        the collection of values of a dict is a list
+
+    operations: (CRUD)
+        adding new entry:
+            d[new_key] = value
+            d["hello2"] = 6789.9
+
+        access the entry/ value:
+            d[key] -> value
+            print(d["hello2"])
+        
+        update entry/ value:
+            d[old_key] = new_value
+            d["hello2"] = [34, 98]
+            d.update({"hello2": [34, 98]}) // SEE
+
+        deleting a entry/ key:
+            del d[key]  // throws error if key not there
+            d.pop(key, opt_default_value) // safer
+
+list: (mutable)
+    index: 
+        0...n-1
+        -n ... -1
+            -1 = n-1
+            -n = n-n = 0
+
+    heterogenous
+
+    syntax examples:
+        l = []
+        l = list()                      # []
+        l = [1,2,3]
+        l = list((1,2,3))               # [1,2,3]
+        l = list([1,2,3])               # [1,2,3]
+        l = list({1,2,3})               # [1,2,3]
+        l = list({1:10, 2:20, 3:30})    # [1,2,3]
+
+    operations: (CRUD)
+        adding new element:
+            l.append(element)
+            l.append(10)
+
+            l.insert(pos, element) // pos: 0-indexed
+            l.insert(1, 10)
+
+        adding multiple elements: // SEE
+            l.extend((...))
+            l.extend([...])
+            l.extend({...})
+
+        accessing an element:
+            l[index]
+            l[9]
+            l[-70]
+        
+        accessing a sublist: (slice)
+            l = [1,2,3,4]
+            
+            l[start:]               // l[1:]    => [2,3,4]
+            l[start:stop]           // l[1:3]   => [2,3]
+            l[start:stop:step]      // l[1::2]  => [2,4]
+
+            start,stop,step -> all are optional
+            practical stop = stop-1
+
+            defaults:
+                start   = 0
+                stop    = n
+                step    = 1
+            
+            reversing a list:
+                l[::-1] => reverse
+                l[::-1][::-1] => l
+
+        updating single element:
+            l[index] = new_value
+            l[3] = {3:6}
+        
+        updating a sublist:
+            l[3:6] = [3,4,5]
+        
+        deleting an element:
+            del l[index]
+            l.pop(index)        // safer
+            l.remove(element)   // deletes the 1st occurrence of the element
+
+tuple: (immutable)
+    index: 0...n-1
+
+    heterogenous
+
+    syntax examples:
+        t = ()
+        t = (1,)                        # (1, )
+        t = 1,                          # (1, )
+        t = (1,2,3)
+        t = 1,2,3                       # (1,2,3)
+        t = tuple((1,2,3))              # (1,2,3)
+        t = tuple([1,2,3])              # (1,2,3)
+        t = tuple({1,2,3})              # (1,2,3)
+        t = list({1:10, 2:20, 3:30})    # (1,2,3)
+
+    note:
+        same as list, but fixed
+
+    operations: (CRUD)
+        adding new element:         NOT ALLOWED
+
+        accessing an element:
+            t[index]
+            t[9]
+            t[-70]
+        
+        accessing a sublist: (slice)
+            t = (1,2,3,4)
+            
+            t[start:]               // l[1:]    => (2,3,4)
+            t[start:stop]           // l[1:3]   => (2,3)
+            t[start:stop:step]      // l[1::2]  => (2,4)
+
+            start,stop,step -> all are optional
+            practical stop = stop-1
+
+            defaults:
+                start   = 0
+                stop    = n
+                step    = 1
+            
+            reversing a list:
+                t[::-1] => reverse
+                t[::-1][::-1] => t
+
+        updating single element:    NOT ALLOWED
+        updating a sublist:         NOT ALLOWED
+        deleting an element:        NOT ALLOWED
+
+
+
+set: (mutable) (hypocrite)
+    elements are unique
+        elements - immutable
+
+    heterogenous
+    unordered
+    index DOESNT work
+
+    syntax:
+        s = set()
+        s = {1}
+        s = {1,2,3}
+
+    // invalid example: why cant the elements be mutable
+    s = {[1,2], [1,2,3], [1]}
+    s = {[1,2,3], [1,2,3], [1]}
+
+    // valid example
+    s = {(1,2), (1,2,3), (1,)}
+
+    Note:
+        why hypocrite: it only accepts immutable items, but it itself is mutable
+
+    operations: (CRUD)
+        adding element:
+            s.add(element)
+
+        adding multiple elements:
+            s.update((...))
+            s.update([...])
+            s.update({...})
+
+        reading element(s): NOT ALLOWED
+        update element(s): NOT ALLOWED
+
+        delete element:
+            s.remove(element)
