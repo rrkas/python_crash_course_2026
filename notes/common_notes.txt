@@ -1,0 +1,48 @@
+========================================= playground
+
+https://www.programiz.com/python-programming/online-compiler/
+
+========================================= environment
+
+python -m venv .venv
+virtualenv .venv2
+
+uv init ==> boilerplate
+uv sync ==> env
+
+========================================= modules and packages
+
+folder = module
+file = package (inside a module)
+object/ fn = inside a package
+
+========================================= __name__
+
+__name__
+    when run directly: __main__
+    else: name of py file name
+
+
+========================================= IMP
+
+indentation: very IMP
+
+========================================= brackets
+
+{} : dict, set
+() : tuples, expression, args
+[] : list, indexing
+
+========================================= 1st class objects
+A first-class object (or first-class citizen) in a programming language is an entity that supports all the operations generally available to other entities, such as variables, integers, or strings. 
+This means the object can be handled uniformly, without restrictions. 
+Key properties of first-class objects include the ability to be:
+    - Assigned to a variable.
+    - Stored in data structures (like lists, arrays, or dictionaries).
+    - Passed as an argument to a function or procedure.
+    - Returned as the result of a function or procedure call.
+    - Created at runtime.
+    - Tested for equality with other entities. 
+
+
+

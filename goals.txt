@@ -3,10 +3,16 @@ modules and packages
 python basics
     data types
 functions
+    lambda
+    range
+    map, filter
+    decorators
+    generator
+    args, kwargs
 classes
     basic
     inheritance
-decorators
+    iterator
 rest api
 file management & io
 threading & multiprocessing

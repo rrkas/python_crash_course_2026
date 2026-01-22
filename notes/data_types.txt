@@ -1,41 +1,4 @@
-========================================= playground
-
-https://www.programiz.com/python-programming/online-compiler/
-
-========================================= environment
-
-python -m venv .venv
-virtualenv .venv2
-
-uv init ==> boilerplate
-uv sync ==> env
-
-========================================= modules and packages
-
-folder = module
-file = package (inside a module)
-object/ fn = inside a package
-
-========================================= __name__
-
-__name__
-    when run directly: __main__
-    else: name of py file name
-
-
-========================================= IMP
-
-indentation: very IMP
-
-========================================= brackets
-
-{} : dict/ map , set
-() : tuples, expression, args
-[] : list, indexing
-
-========================================= data types
-
-dict: (mutable)
+dict: (mutable) mapping
     key - value
         key     : immutable
         value   : anything
@@ -64,11 +27,16 @@ dict: (mutable)
         access the entry/ value:
             d[key] -> value
             print(d["hello2"])
+            d.get(key)
         
         update entry/ value:
             d[old_key] = new_value
             d["hello2"] = [34, 98]
-            d.update({"hello2": [34, 98]}) // SEE
+
+            d.update({"hello2": [34, 98]})
+
+            - if key exists: update value
+            - if key doesnt exist, add entry
 
         deleting a entry/ key:
             del d[key]  // throws error if key not there
@@ -100,11 +68,17 @@ list: (mutable)
             l.insert(pos, element) // pos: 0-indexed
             l.insert(1, 10)
 
-        adding multiple elements: // SEE
+        adding multiple elements:
             l.extend((...))
             l.extend([...])
             l.extend({...})
 
+            l = [1,2,4]
+            l2 = [789, "khli"]
+            
+            l.append(l2)    // l => [1, 2, 4, [789, "khli"]]
+            l.extend(l2)    // l => [1, 2, 4, 789, "khli"]
+            
         accessing an element:
             l[index]
             l[9]
@@ -168,7 +142,7 @@ tuple: (immutable)
             t[9]
             t[-70]
         
-        accessing a sublist: (slice)
+        accessing a sub-tuple: (slice)
             t = (1,2,3,4)
             
             t[start:]               // l[1:]    => (2,3,4)
@@ -230,3 +204,46 @@ set: (mutable) (hypocrite)
 
         delete element:
             s.remove(element)
+
+string: (immutable)
+    collection of characters, digits and symbols & other things
+
+    syntax:
+        s = "..."       // single line
+        s = '...'       // single line
+        s = """..."""   // multiline
+        s = '''...'''   // multiline
+
+    formatted string: (for string interpolation)
+        s = f"..{}.."      // single line
+        s = f'..{}..'      // single line
+        s = f"""..{}.."""  // multiline
+        s = f'''..{}..'''  // multiline
+
+    raw string: (for escape & regex mostly)
+        s = r"..."      // single line
+        s = r'...'      // single line
+        s = r"""..."""  // multiline
+        s = r'''...'''  // multiline
+
+        import re 
+
+        s = "iljkh 76980-878\\ khjghfgh"
+        print(s)
+        print(re.findall(r"\d+\\", s)[0])
+
+
+    operations: (CRUD)
+        accessing character/ substring:
+            - a single character is a string    // s[index]
+            - a substring is a string           // s[start:stop:step]
+
+        string concatenation:
+            s = a + b
+            s += a      // s = s + a
+
+        updating/ modifying: NOT ALLOWED
+
+        deleting a string (not a char/ substring):
+            del s
+

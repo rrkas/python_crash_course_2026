@@ -1,0 +1,120 @@
+- fns are 1st class objects
+
+
+
+no param, no return
+============================
+def say_hello():
+    print("hello")
+
+
+no param, with return
+============================
+def get_hello():
+    return "hello"
+
+
+with param, no return
+============================
+def greet_hello(name):
+    print(f"hello {name}!")
+
+
+with param, with return
+============================
+def get_greeting(name):
+    return f"hello {name}!"
+
+
+args, kwargs params
+============================
+args -> unlimited number of positional arguments
+kwargs -> unlimited number of named/ keyword arguments
+
+def add_alt(*nums):
+    sum_1 = 0
+    sum_2 = 0
+
+    for i in range(len(nums)):
+        if i%2==0:
+            sum_1 += nums[i]
+        else:
+            sum_2 += nums[i]
+
+    return sum_1, sum_2
+
+add_alt(1, 2, 3, 4, 5)
+
+
+def make_len_dict(**kwargs):
+    d1 = {}
+    d2 = {}
+
+    for k,v in kwargs.items():
+        if len(k)%2 == 0:
+            d1[k] = v
+        else:
+            d2[k] = v
+
+    return d1, d2
+
+make_len_dict({
+    "hello": 5,
+    "hi": "yo",
+    "good day!": "ciao",
+})
+
+
+lambda function
+---------------
+- one liner function
+- for short body
+- anonymous
+
+sum_fn = lambda a,b: a+b
+sum_fn(7, 8)
+
+
+map, filter functions
+============================
+map
+    apply a function to elements of iterable
+
+    l = [1,2,3,4]
+    l2 = list(map(lambda x:x**2, l))
+
+    def square(x):
+        return x**2
+
+    l2 = list(map(square, l))
+
+filter
+    applies a filtering function to check which elements to keep or not
+
+    l = [1,2,3,4]
+    l2 = list(filter(lambda: x:x%2==1, l))
+
+    def odd(x):
+        return x%2==1
+
+    l2 = list(filter(odd, l))
+
+
+generator
+============================
+- returns/ yields values without ending the function session
+
+def get_num_sq(n):
+    for i in range(n):
+        yield i**2
+
+for val in get_num_sq(10):
+    print(val)
+
+
+
+
+
+
+
+
