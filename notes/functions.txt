@@ -75,31 +75,6 @@ sum_fn = lambda a,b: a+b
 sum_fn(7, 8)
 
 
-map, filter functions
-============================
-map
-    apply a function to elements of iterable
-
-    l = [1,2,3,4]
-    l2 = list(map(lambda x:x**2, l))
-
-    def square(x):
-        return x**2
-
-    l2 = list(map(square, l))
-
-filter
-    applies a filtering function to check which elements to keep or not
-
-    l = [1,2,3,4]
-    l2 = list(filter(lambda: x:x%2==1, l))
-
-    def odd(x):
-        return x%2==1
-
-    l2 = list(filter(odd, l))
-
-
 generator
 ============================
 - returns/ yields values without ending the function session
@@ -113,7 +88,40 @@ for val in get_num_sq(10):
 
 
 
+in-built functions
+============================
+map:
+    apply a function to elements of iterable
 
+    l = [1,2,3,4]
+    l2 = list(map(lambda x:x**2, l))
+
+    def square(x):
+        return x**2
+
+    l2 = list(map(square, l))
+
+filter:
+    applies a filtering function to check which elements to keep or not
+
+    l = [1,2,3,4]
+    l2 = list(filter(lambda: x:x%2==1, l))
+
+    def odd(x):
+        return x%2==1
+
+    l2 = list(filter(odd, l))
+
+range:
+    - iterates over numbers
+    
+    syntax: 
+        range(stop)
+        range(start, stop)
+        range(start, stop, step)
+
+    for i in range(10):
+        //...
 
 
 

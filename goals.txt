@@ -2,13 +2,20 @@ python environments & dependencies
 modules and packages
 python basics
     data types
+    control blocks
+        if - elif - else 
+        match-case statement
+        for loop
+        while loop
 functions
-    lambda
-    range
-    map, filter
-    decorators
-    generator
     args, kwargs
+    lambda
+    generator
+    decorators
+    in-built functions:
+        range
+        map
+        filter
 classes
     basic
     inheritance
