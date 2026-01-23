@@ -44,5 +44,17 @@ Key properties of first-class objects include the ability to be:
     - Created at runtime.
     - Tested for equality with other entities. 
 
+========================================= error/ exception handling
+
+base error/ exception class: BaseException
+
+handling exception/ error:
+
+try:
+    ...
+except [Class [object]]:
+    ...
+finally:
+    ...
 
 

@@ -1,7 +1,30 @@
 python environments & dependencies
+    Virtual environments (venv, pip, pipx, conda)
+    requirements.txt / pyproject.toml
 modules and packages
+    Absolute vs relative imports
+    sys.path
+    Standard Library
+        os
+        sys
+        datetime
+        math, random
+        itertools
+        functools (lru_cache, partial)
+        enum
 python basics
     data types
+        list
+        tuple
+        set
+        dict
+        string
+        int
+        float
+        Comprehensions
+            list comprehension
+            dict & set comprehension
+    Variables & naming conventions
     control blocks
         if - elif - else 
         match-case statement
@@ -12,14 +35,46 @@ functions
     lambda
     generator
     decorators
+    Default arguments & argument order
+    Closures
+    * and / in function signatures (keyword-only & positional-only)
     in-built functions:
         range
         map
         filter
+        isinstance
 classes
     basic
     inheritance
     iterator
-rest api
+    __init__
+    __str__ / __repr__
+    Magic / dunder methods (dunder = double underscore)
+        __len__
+        __eq__
+        __iter__
+        __next__
+    Class variables vs instance variables
+    @classmethod and @staticmethod
+    dataclasses (very important in modern Python)
+error handling
+    try-except-finally
+    raise
+    Built-in exceptions
+        ValueError
+        TypeError
+        KeyError
+        IndexError
+    Custom exceptions
 file management & io
-threading & multiprocessing
+concurrency
+    threading
+    multiprocessing
+    ayncio
+Testing & Debugging
+    unittest / pytest (at least basics)
+    assert
+    logging module (very important for real projects)
+        loguru
+    pdb (debugger)
+
