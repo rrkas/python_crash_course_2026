@@ -25,6 +25,12 @@ python basics
             list comprehension
             dict & set comprehension
     Variables & naming conventions
+        right: my_var   snake_case
+        wrong: myVar    camelCase
+
+        valid chars: 0-9 _ a-z A-Z
+        rules: should not start with 0-9
+
     control blocks
         if - elif - else 
         match-case statement

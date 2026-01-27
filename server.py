@@ -3,7 +3,7 @@ from flask import Flask, request
 
 myApp = Flask("demo app")
 
-# print(__name__)
+print(__name__)
 
 
 def add(a, b):

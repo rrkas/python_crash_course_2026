@@ -1,0 +1,71 @@
+if-elif-else
+==========================
+
+if condition:
+    //...
+
+
+if condition:
+    //...
+else:
+    //...
+
+
+if condition:
+    //...
+elif condition:
+    //...
+
+
+if condition:
+    //...
+elif condition:
+    //...
+else:
+    //...
+
+
+match-case
+=========================
+match expression:
+    case value:
+        //...
+
+
+
+for
+========================
+for loop_var in iterable:
+    //...
+
+for loop_var in iterable:
+    //...
+else:
+    //...
+
+
+while
+========================
+while condition:
+    //...
+
+
+while condition:
+    //...
+else:
+    //...
+
+
+
+continue & break
+========================
+
+continue: skips the current iteration
+break   : breaks the inner most loop
+
+
+
+
+REF:
+    https://www.geeksforgeeks.org/python/using-else-conditional-statement-with-for-loop-in-python/
+
